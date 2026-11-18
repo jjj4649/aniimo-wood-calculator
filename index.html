@@ -257,6 +257,12 @@
   footer p{margin:4px 0}
   input:focus-visible,button:focus-visible,select:focus-visible{outline:2px solid var(--wood);outline-offset:2px}
 </style>
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#205c37">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="木製部材計算機">
 </head>
 <body>
 <main>
@@ -935,5 +941,6 @@
   calc();
 })();
 </script>
+<script>if('serviceWorker' in navigator && location.protocol.indexOf('http')===0){window.addEventListener('load',function(){navigator.serviceWorker.register('sw.js').catch(function(){});});}</script>
 </body>
 </html>
